@@ -313,9 +313,9 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 relative z-10 overflow-hidden min-h-0">
-              {alerts.map((alert) => (
-                <div key={alert.id} className={`p-3 rounded-xl border relative overflow-hidden group
+            <div className="flex flex-col gap-2 relative z-10 overflow-hidden min-h-0">
+              {alerts.slice(0, 4).map((alert) => (
+                <div key={alert.id} className={`p-2 px-3 rounded-xl border relative overflow-hidden group
                   ${alert.type === 'urgent' ? 'bg-red-500/5 border-red-500/20' : 
                     alert.type === 'warning' ? 'bg-yellow-500/5 border-yellow-500/20' : 
                     'bg-blue-500/5 border-blue-500/20'}`}>
@@ -326,20 +326,20 @@ export default function Dashboard() {
                       alert.type === 'warning' ? 'bg-yellow-500' : 
                       'bg-blue-500'}`}></div>
                   
-                  <div className="flex gap-3">
-                    <div className="mt-0.5">
-                      {alert.type === 'urgent' ? <ShieldAlert size={18} className="text-red-400" /> : 
-                       alert.type === 'warning' ? <AlertTriangle size={18} className="text-yellow-400" /> : 
-                       <Activity size={18} className="text-blue-400" />}
+                  <div className="flex gap-2">
+                    <div className="mt-0.5 shrink-0">
+                      {alert.type === 'urgent' ? <ShieldAlert size={16} className="text-red-400" /> : 
+                       alert.type === 'warning' ? <AlertTriangle size={16} className="text-yellow-400" /> : 
+                       <Activity size={16} className="text-blue-400" />}
                     </div>
-                    <p className="text-sm text-gray-300 leading-relaxed">
+                    <p className="text-xs text-gray-300 leading-snug">
                       {alert.text}
                     </p>
                   </div>
                   
                   {alert.type === 'urgent' && (
-                    <button className="mt-3 ml-7 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg text-xs font-medium text-white transition-colors duration-200 flex items-center gap-1">
-                      Execute Shift <Activity size={12} />
+                    <button className="mt-2 ml-6 bg-white/5 hover:bg-white/10 border border-white/10 px-2 py-1 rounded-md text-[10px] font-medium text-white transition-colors duration-200 flex items-center gap-1 w-fit">
+                      Execute Shift <Activity size={10} />
                     </button>
                   )}
                 </div>
