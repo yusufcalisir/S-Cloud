@@ -101,7 +101,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="h-screen overflow-hidden bg-snoonu-anthracite text-white font-sans p-3 flex flex-col gap-3">
+    <div className="min-h-screen lg:h-screen overflow-x-hidden lg:overflow-hidden bg-snoonu-anthracite text-white font-sans p-3 flex flex-col gap-3">
       
       {/* Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-2 shrink-0">
@@ -202,7 +202,7 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 flex-1 min-h-0">
             
             {/* Regional Performance Chart */}
-            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-0">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-[250px] lg:min-h-0">
               <h3 className="text-base font-semibold mb-3 flex items-center gap-2 shrink-0">
                 <MapPin size={18} className="text-snoonu-orange" />
                 Regional Delivery Speeds (mins)
@@ -244,7 +244,7 @@ export default function Dashboard() {
             </div>
 
             {/* Live Dispatch Feed */}
-            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-0">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-[300px] lg:min-h-0">
               <div className="flex justify-between items-center mb-3 shrink-0">
                 <h3 className="text-base font-semibold flex items-center gap-2">
                   <Zap size={18} className="text-yellow-400" />
@@ -299,7 +299,7 @@ export default function Dashboard() {
         <div className="lg:col-span-1 flex flex-col gap-3 min-h-0">
           
           {/* AI Optimizer Panel */}
-          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col relative overflow-hidden h-full flex-1">
+          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col relative overflow-hidden h-full flex-1 min-h-[350px] lg:min-h-0">
             {/* Fancy Background glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-snoonu-orange/10 rounded-full blur-3xl"></div>
             
