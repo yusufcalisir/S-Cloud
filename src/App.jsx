@@ -99,10 +99,10 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen [@media(min-width:1024px)_and_(min-height:850px)]:h-screen [@media(min-width:1024px)_and_(min-height:850px)]:overflow-hidden overflow-auto bg-snoonu-anthracite text-white font-sans p-4 flex flex-col gap-4">
+    <div className="h-screen overflow-hidden bg-snoonu-anthracite text-white font-sans p-3 flex flex-col gap-3">
       
       {/* Header */}
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-4 shrink-0">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-2 shrink-0">
         <div>
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
             <span className="text-snoonu-orange"><Activity size={32} /></span>
@@ -110,7 +110,7 @@ export default function Dashboard() {
           </h1>
           <p className="text-gray-400 mt-1 text-sm">Fleet Health &amp; AI Optimization Dashboard</p>
         </div>
-        <div className="mt-4 md:mt-0 flex items-center gap-4 bg-gray-900 px-4 py-2 rounded-full border border-gray-800 shadow-inner">
+        <div className="mt-4 md:mt-0 flex items-center gap-3 bg-gray-900 px-4 py-2 rounded-full border border-gray-800 shadow-inner">
           <div className="flex items-center gap-2">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-snoonu-orange opacity-75"></span>
@@ -121,16 +121,16 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 flex-1 min-h-0">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 flex-1 min-h-0">
         
         {/* Main Content Area */}
-        <div className="lg:col-span-3 flex flex-col gap-4 min-h-0">
+        <div className="lg:col-span-3 flex flex-col gap-3 min-h-0">
           
           {/* Executive KPI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 shrink-0">
             
             {/* KPI 1: Active Fleet */}
-            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-4 rounded-2xl shadow-lg relative overflow-hidden group hover:border-snoonu-orange/50 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-3 rounded-2xl shadow-lg relative overflow-hidden group hover:border-snoonu-orange/50 transition-colors">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-gray-400 text-sm font-medium">Active Fleet</p>
@@ -148,7 +148,7 @@ export default function Dashboard() {
             </div>
 
             {/* KPI 2: On-Time Delivery Rate */}
-            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-4 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-3 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-gray-400 text-sm font-medium">On-Time Rate</p>
@@ -164,7 +164,7 @@ export default function Dashboard() {
             </div>
 
             {/* KPI 3: Avg Prep Time */}
-            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-4 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-3 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-gray-400 text-sm font-medium">Avg. Prep Time</p>
@@ -180,7 +180,7 @@ export default function Dashboard() {
             </div>
 
             {/* KPI 4: Cost Per Delivery */}
-            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-4 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-md border border-gray-800 p-3 rounded-2xl shadow-lg hover:border-gray-700 transition-colors">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-gray-400 text-sm font-medium">Cost/Delivery</p>
@@ -197,10 +197,10 @@ export default function Dashboard() {
 
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1 min-h-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 flex-1 min-h-0">
             
             {/* Regional Performance Chart */}
-            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-4 shadow-lg flex flex-col min-h-0">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-0">
               <h3 className="text-base font-semibold mb-3 flex items-center gap-2 shrink-0">
                 <MapPin size={18} className="text-snoonu-orange" />
                 Regional Delivery Speeds (mins)
@@ -242,13 +242,13 @@ export default function Dashboard() {
             </div>
 
             {/* Live Dispatch Feed */}
-            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-4 shadow-lg flex flex-col min-h-0">
+            <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col min-h-0">
               <div className="flex justify-between items-center mb-3 shrink-0">
                 <h3 className="text-base font-semibold flex items-center gap-2">
                   <Zap size={18} className="text-yellow-400" />
                   Live Dispatch Feed
                 </h3>
-                <span className="text-xs font-medium px-2 py-1 bg-gray-800 rounded text-gray-400">Last 8 Orders</span>
+                <span className="text-xs font-medium px-2 py-1 bg-gray-800 rounded text-gray-400">Last 6 Orders</span>
               </div>
               
               <div className="overflow-hidden flex-1 min-h-0">
@@ -262,7 +262,7 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-800/50">
-                    {orders.map((order) => (
+                    {orders.slice(0, 6).map((order) => (
                       <tr key={order.id} className="hover:bg-gray-800/20 transition-colors group">
                         <td className="py-3 font-medium text-gray-300">{order.id}</td>
                         <td className="py-3 text-gray-400">{order.location}</td>
@@ -294,10 +294,10 @@ export default function Dashboard() {
         </div>
 
         {/* Right Sidebar: AI Optimizer Panel & Nodes Status */}
-        <div className="lg:col-span-1 flex flex-col gap-4 min-h-0">
+        <div className="lg:col-span-1 flex flex-col gap-3 min-h-0">
           
           {/* AI Optimizer Panel */}
-          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-4 shadow-lg flex flex-col relative overflow-hidden shrink-0">
+          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col relative overflow-hidden shrink min-h-0">
             {/* Fancy Background glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-snoonu-orange/10 rounded-full blur-3xl"></div>
             
@@ -313,7 +313,7 @@ export default function Dashboard() {
 
             <div className="flex flex-col gap-3 relative z-10 overflow-hidden min-h-0">
               {alerts.map((alert) => (
-                <div key={alert.id} className={`p-4 rounded-xl border relative overflow-hidden group
+                <div key={alert.id} className={`p-3 rounded-xl border relative overflow-hidden group
                   ${alert.type === 'urgent' ? 'bg-red-500/5 border-red-500/20' : 
                     alert.type === 'warning' ? 'bg-yellow-500/5 border-yellow-500/20' : 
                     'bg-blue-500/5 border-blue-500/20'}`}>
@@ -352,7 +352,7 @@ export default function Dashboard() {
           </div>
 
           {/* Network Nodes Status Panel */}
-          <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-4 shadow-lg flex-1 min-h-0 flex flex-col">
+          <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex-1 min-h-0 flex flex-col">
             <h3 className="text-base font-semibold mb-4 flex items-center gap-2 shrink-0">
               <Activity size={18} className="text-emerald-400" />
               Network Nodes
@@ -390,7 +390,7 @@ export default function Dashboard() {
       </div>
 
       {/* Full Width Bottom Row: Delivery Volume Trend */}
-      <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-4 shadow-lg flex flex-col gap-2 shrink-0 h-[22vh] min-h-[160px]">
+      <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col gap-2 shrink-0 h-[18vh] min-h-[120px]">
         <div className="flex justify-between items-center shrink-0">
           <h3 className="text-base font-semibold flex items-center gap-2">
             <TrendingUp size={18} className="text-blue-400" />
