@@ -39,7 +39,9 @@ const initialVolumeData = [
 const initialAlerts = [
   { id: 1, text: "High demand in Lusail: Recommend shifting 5 riders from Al Dafna to reduce wait time by 12%.", type: "urgent" },
   { id: 2, text: "Sufra AI indicates 15% increase in prep times at Downtown branches. Monitor active dispatches.", type: "warning" },
-  { id: 3, text: "Fleet distribution optimal in Al Rayyan. Estimated cost-per-delivery stable.", type: "info" }
+  { id: 3, text: "Fleet distribution optimal in Al Rayyan. Estimated cost-per-delivery stable.", type: "info" },
+  { id: 4, text: "System anomaly detected: Dispatch latency spike in zone 4. Auto-resolving.", type: "warning" },
+  { id: 5, text: "Route optimization model successfully deployed to 450 active nodes.", type: "info" }
 ];
 
 export default function Dashboard() {
@@ -297,7 +299,7 @@ export default function Dashboard() {
         <div className="lg:col-span-1 flex flex-col gap-3 min-h-0">
           
           {/* AI Optimizer Panel */}
-          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col relative overflow-hidden shrink min-h-0">
+          <div className="bg-gradient-to-b from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col relative overflow-hidden h-full flex-1">
             {/* Fancy Background glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-snoonu-orange/10 rounded-full blur-3xl"></div>
             
@@ -351,46 +353,12 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Network Nodes Status Panel */}
-          <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex-1 min-h-0 flex flex-col">
-            <h3 className="text-base font-semibold mb-4 flex items-center gap-2 shrink-0">
-              <Activity size={18} className="text-emerald-400" />
-              Network Nodes
-            </h3>
-            <div className="flex flex-col gap-3 overflow-hidden flex-1 min-h-0">
-              {[
-                { name: 'Doha Central DB', status: 'Optimal', uptime: '99.9%' },
-                { name: 'Lusail Hub Router', status: 'Optimal', uptime: '100%' },
-                { name: 'Al Rayyan Edge', status: 'Optimal', uptime: '99.8%' },
-                { name: 'Sufra Inference API', status: 'Processing', uptime: '99.9%' }
-              ].map((node, i) => (
-                <div key={i} className="flex items-center justify-between p-3 bg-gray-800/30 rounded-xl border border-gray-800/50 hover:bg-gray-800/50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <span className="relative flex h-2 w-2">
-                      {node.status === 'Processing' ? (
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      ) : (
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      )}
-                      <span className={`relative inline-flex rounded-full h-2 w-2 ${node.status === 'Processing' ? 'bg-blue-500' : 'bg-emerald-500'}`}></span>
-                    </span>
-                    <div>
-                      <p className="text-sm font-medium text-gray-200">{node.name}</p>
-                      <p className="text-[10px] text-gray-500 mt-0.5">{node.status}</p>
-                    </div>
-                  </div>
-                  <span className="text-xs font-semibold text-gray-400">{node.uptime}</span>
-                </div>
-              ))}
-            </div>
           </div>
-
-        </div>
 
       </div>
 
       {/* Full Width Bottom Row: Delivery Volume Trend */}
-      <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col gap-2 shrink-0 h-[18vh] min-h-[120px]">
+      <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-3 shadow-lg flex flex-col gap-2 shrink-0 h-[25vh] min-h-[180px]">
         <div className="flex justify-between items-center shrink-0">
           <h3 className="text-base font-semibold flex items-center gap-2">
             <TrendingUp size={18} className="text-blue-400" />
