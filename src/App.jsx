@@ -208,7 +208,7 @@ export default function Dashboard() {
                 Regional Delivery Speeds (mins)
               </h3>
               <div className="flex-1 w-full min-h-0">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                   <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }} barSize={36}>
                     <defs>
                       <linearGradient id="colorDoha" x1="0" y1="0" x2="0" y2="1">
@@ -367,7 +367,7 @@ export default function Dashboard() {
           <span className="text-xs font-medium px-2 py-1 bg-gray-800 rounded text-gray-400">Live Updates</span>
         </div>
         <div className="flex-1 w-full min-h-0">
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
             <AreaChart data={volumeData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorOrders" x1="0" y1="0" x2="0" y2="1">
