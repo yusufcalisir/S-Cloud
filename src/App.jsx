@@ -99,7 +99,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="h-screen overflow-hidden bg-snoonu-anthracite text-white font-sans p-4 flex flex-col gap-4">
+    <div className="min-h-screen lg:h-screen lg:overflow-hidden overflow-auto bg-snoonu-anthracite text-white font-sans p-4 flex flex-col gap-4">
       
       {/* Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-4 shrink-0">
