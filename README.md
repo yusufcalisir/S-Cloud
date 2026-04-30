@@ -3,6 +3,7 @@
 ![S-Cloud Banner](./src/assets/banner.png)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://s-cloud.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ## 🌍 Project Overview
 **S-Cloud** represents the next evolutionary leap for Snoonu: transitioning from a consumer-centric Super-App into a global **Platform-as-a-Service (PaaS)** infrastructure provider. 
@@ -14,6 +15,7 @@ This prototype dashboard demonstrates the power of S-Cloud's infrastructure when
 * **AI Optimizer Panel:** Predictive, dynamic shifting of rider distribution based on localized demand heatmaps to proactively prevent service degradation.
 * **KPI Analytics:** Instant visibility into mission-critical metrics including "Estimated Cost-per-Delivery" and "On-Time Delivery Rate."
 * **Reactive Dispatching:** Advanced algorithmic visualization designed to systematically minimize "Rider Idle Time" and heavily penalize "Long-distance Assignment."
+* **Responsive Command Center Layout:** Engineered with a strict zero-scroll static viewport on desktop displays, gracefully degrading into a scrollable, stacked interface on mobile viewports for universal accessibility.
 
 ## 🛠️ Tech Stack
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -43,3 +45,6 @@ To spin up this enterprise dashboard locally:
 
 ## 💡 Author & Intent
 This Proof-of-Work (PoW) was engineered to demonstrate a deep understanding of logistics PaaS requirements and scalable frontend architecture. It is built by a developer profoundly passionate about scaling the GCC's technology ecosystem and exporting MENA-born innovation to the global market.
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Copyright (c) 2026 Yusuf Çalışır.
